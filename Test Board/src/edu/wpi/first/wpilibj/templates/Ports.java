@@ -3,10 +3,8 @@ package edu.wpi.first.wpilibj.templates;
 public class Ports {
 //  Digital SideCar PWM/////////////////////////////////////////////////////////
 
-    public final static int leftDriveMotorChannel = DSCPWM.ch1;
-    public final static int rightDriveMotorChannel = DSCPWM.ch2;
-    public final static int aimMotorChannel = DSCPWM.ch3;
-    public final static int shooterMotorChannel = DSCPWM.ch4;
+    public final static int leftDriveMotor = DSCPWM.ch1;
+    public final static int rightDriveMotor = DSCPWM.ch2;
 ////////////////////////////////////////////////////////////////////////////////
 
 //  Digital SideCar DIO/////////////////////////////////////////////////////////
@@ -20,11 +18,6 @@ public class Ports {
 /// Analog Module///////////////////////////////////////////////////////////////   
     public final static int gyroChannel = Ports.AM.ch1;
     public final static int airTankPressureSensorChannel = Ports.AM.ch4;
-////////////////////////////////////////////////////////////////////////////////
-
-// Solenoid Module//////////////////////////////////////////////////////////////
-    public final static int airShocksChannel = Ports.SM.ch1;
-    public final static int ballLifterChannel = Ports.SM.ch2;
 ////////////////////////////////////////////////////////////////////////////////
 
     // Digital SideCar Relay channels

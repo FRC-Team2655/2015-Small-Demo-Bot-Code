@@ -18,7 +18,7 @@ public class DriveSystem {
     public DriveSystem(TeamJoystick driveStick) {
         this.driveStick = driveStick;
         gyro = new Gyro(1);
-        mainDrive = new RobotDrive(Ports.leftDriveMotorChannel, Ports.rightDriveMotorChannel);
+        mainDrive = new RobotDrive(Ports.leftDriveMotor, Ports.rightDriveMotor);
         thread = new DriveSystemThread();
         thread.start();
     }
