@@ -9,7 +9,13 @@ Blinker::Blinker(int led_pin):
           
     ledOn();
 }
-	
+
+void Blinker::setSeriesBlinkCode(int multiplier, int count) {
+		_multiplier = multiplier;
+		_count = count;
+		_tMuliplier = _tCount = 0;
+}
+
 // blink the light if not timed out
 void Blinker::blink() {
 	if (timeout()) {

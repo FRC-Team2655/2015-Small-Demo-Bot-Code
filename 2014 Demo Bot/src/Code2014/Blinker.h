@@ -15,22 +15,24 @@ class Blinker {
 		int _led_pin;
 		int _led_state;
 		unsigned long _endPulseTime;
+		
+		int _tMuliplier;
+		int _tCount;
+		
 	public:
 	
 	// construct and connect to LED pin
+	Blinker(int led_pin);
 	// led pin is arduino led pin
 	// default series blink code = setSeriesBlinkCode(8,1);
-	// default timeout = MAXINT
-	Blinker(int led_pin);
-	
+	// default timeout = MAXINT	
 	// blink the light if not timed out
+
 	void blink();
 	
 	// setup to start series of blink codes
-	void setSeriesBlinkCode(int multiplier, int count) {
-		_multiplier = multiplier;
-		_count = count;
-	}
+	// blink "multiplier" groups of "count" blinks
+	void setSeriesBlinkCode(int multiplier, int count);
 	
 	// set period
 	// default = 1 second (1/2 on, 1/2 off)
@@ -48,9 +50,10 @@ class Blinker {
 	void kick() {
   		_endtime = millis() + _timeout;
     }
+	
 	bool pulseTimeExceeded() {
 		return millis() > _endPulseTime;
-	}	
+	}
 	
 	// return true if timeout, false otherwise
 	boolean timeout() {
