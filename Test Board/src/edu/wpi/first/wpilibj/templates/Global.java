@@ -12,7 +12,4 @@ public class Global {
     public final static double psiSlope = 43.5;
     public final static double psiIntercept = (-21.75); // b
     public final static double wantedMinimumPSI = 115;
-    
-    //
-    public final static double shooterSpinUpTime = 500;
 }
