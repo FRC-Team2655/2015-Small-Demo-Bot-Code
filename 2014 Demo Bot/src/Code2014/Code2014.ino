@@ -34,8 +34,8 @@ const int role_pin = A0;
 const uint64_t pipe = 0xE8E8F0F0E1LL;
 
 
-#define CONTROLLER true
-#define ROBOT false
+#define CONTROLLER 1
+#define ROBOT 0
 
 Blinker blinky(LED_BUILTIN);
 boolean role = CONTROLLER;
