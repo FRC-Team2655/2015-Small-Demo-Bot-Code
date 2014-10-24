@@ -16,7 +16,6 @@
  * Every time the buttons change on the remote, the entire state of
  * buttons is send to the led board, which displays the state.
  */
-
 #include <SPI.h>
 #include "RF24_config.h"
 #include "nRF24L01.h"
@@ -24,30 +23,40 @@
 #include "printf.h"
 
 #include "blinker.h"
+#include "robot.h"
+#include "controller.h"
+#include "ADXL335.h"
+
 //
 // Hardware configuration
 //
 
-const int role_pin = A0;
+// just a guess
+#define ROLE_PIN A0
 
 // Single radio pipe address for the 2 nodes to communicate.
-const uint64_t pipe = 0xE8E8F0F0E1LL;
+//const uint64_t pipe = 0xE8E8F0F0E1LL;
 
 
 #define CONTROLLER 1
 #define ROBOT 0
 
 Blinker blinky(LED_BUILTIN);
-boolean role = CONTROLLER;
+
+bool role = CONTROLLER;
 
 // Set up nRF24L01 radio on SPI bus plus pins 9 & 10
 RF24 radio(9,10);
 
-void setup(void)
-{
+Robot *robot = NULL;
+
+Controller *controller = NULL;
+
+void setup(void) {
+
     Serial.begin(9600);
 	
-	radio.begin();
+	//radio.begin();
 
     blinky.ledOn();
 	delay(1000);
@@ -57,18 +66,18 @@ void setup(void)
 
 
     // read the radio status to see if we really have a radio
-    uint8_t status = radio.get_status();
+    //uint8_t status = radio.get_status();
 	
-	Serial.print("Status: ");
-	Serial.println(status,HEX);
+	//Serial.print("Status: ");
+	//Serial.println(status,HEX);
 	
-	return;	
+
     //radio.print_status(status);
     //radio.printDetails();
 
     // set up the role pin
-    pinMode(role_pin, INPUT_PULLUP);
-    role = digitalRead(role_pin);
+    pinMode(ROLE_PIN, INPUT_PULLUP);
+    role = digitalRead(ROLE_PIN);
 
     // blink to indicate which mode we are setting up for
 
@@ -77,13 +86,15 @@ void setup(void)
         // set up to read (2) joysticks and it's button
         // set up to read (5) buttons
         // (future) set up to read gyro
+        controller = new Controller();
 
     } 
     else { // ROBOT side
         // robot side
+        robot = new Robot();
 
     }
-	Serial.println(role == CONTROLLER ? "CONTROLLER" : "ROBOT");
+	//Serial.println(controller != NULL ? "CONTROLLER" : "ROBOT");
     //
     // Print preamble
     //
@@ -103,20 +114,20 @@ void setup(void)
 
     // This simple sketch opens a single pipes for these two nodes to communicate
     // back and forth.  One listens on it, the other talks to it.
-return;
+
     if ( role == CONTROLLER )
     {
-        radio.openWritingPipe(pipe);
+        //radio.openWritingPipe(pipe);
     }
     else
     {
-        radio.openReadingPipe(1,pipe);
+//radio.openReadingPipe(1,pipe);
     }
 
     //
     // Start listening
     //
-
+return;
     if ( role == ROBOT )
         radio.startListening();
 
@@ -135,6 +146,14 @@ return;
 
 void loop(void)
 {
+    if (role == CONTROLLER) {
+        controller->run();
+    } else {
+        robot->run();
+    }
+}
+
+void foo(void) {
     //
     // Remote role.  If the state of any button has changed, send the whole state of
     // all buttons.

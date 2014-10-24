@@ -1,10 +1,13 @@
 #include "blinker.h"
+#include <arduino.h>
+
 
 Blinker::Blinker(int led_pin):
     _multiplier(8),  _count(1), _timeout(MAXINT), _pulseWidth(DEFAULT_PULSE_WIDTH),
     _currentLedState(true), _endtime(MAXINT), _led_pin(led_pin),_led_state(HIGH),
-	_endPulseTime(0)
-	{
+	_endPulseTime(0)	{
+	
+	Serial.println("Blinker::Blinker entered");
     pinMode(_led_pin,OUTPUT);
           
     ledOn();

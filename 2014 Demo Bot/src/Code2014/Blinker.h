@@ -1,3 +1,6 @@
+#ifndef _BLINKER_H
+#define _BLINKER_H
+
 #include <arduino.h>
 
 const unsigned long MAXINT = 0xFFFFFFFF;
@@ -20,6 +23,8 @@ class Blinker {
 		int _tCount;
 		
 	public:
+
+	Blinker() {};
 	
 	// construct and connect to LED pin
 	Blinker(int led_pin);
@@ -36,27 +41,27 @@ class Blinker {
 	
 	// set period
 	// default = 1 second (1/2 on, 1/2 off)
-	void setPulseWidth(int time) {
+	void inline setPulseWidth(int time) {
 		_pulseWidth = time;
 	}
 
 	// set timeout
 	// default = 2 periods
-	void setTimeout(long timeout) {
+	void inline setTimeout(long timeout) {
 		_timeout = timeout;
 	}
 
 	// reset timeout
-	void kick() {
+	void inline kick() {
   		_endtime = millis() + _timeout;
     }
 	
-	bool pulseTimeExceeded() {
+	bool inline pulseTimeExceeded() {
 		return millis() > _endPulseTime;
 	}
 	
 	// return true if timeout, false otherwise
-	boolean timeout() {
+	boolean inline timeout() {
 	    return millis() > _endtime;
 	}
 
@@ -64,3 +69,5 @@ class Blinker {
 	
 	void toggle();
 };
+
+#endif _BLINKER_H
