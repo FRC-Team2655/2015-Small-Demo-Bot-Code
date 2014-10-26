@@ -3,8 +3,6 @@
 
 #include <arduino.h>
 
-const unsigned long MAXINT = 0xFFFFFFFF;
-const unsigned long DEFAULT_PULSE_WIDTH = 500; // ms = 1/2 second
 
 class Blinker {
 	private:
@@ -70,4 +68,4 @@ class Blinker {
 	void toggle();
 };
 
-#endif _BLINKER_H
+#endif // _BLINKER_H

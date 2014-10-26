@@ -1,17 +1,22 @@
 #ifndef _CONTROLLER_H
 #define _CONTROLLER_H
 
+class Joystick;
+class Button;
+
 class Controller {
 
-	//private:
-		// need some joysticks
-		// need some buttons		
+private:
+	Joystick *joy1;
+	Joystick *joy2;
+	Button *button1;
+	Button *button2;
 
-	public:
+public:
 
 	Controller();
 
 	void run();
 };
 
-#endif _CONTROLLER_H
+#endif // _CONTROLLER_H

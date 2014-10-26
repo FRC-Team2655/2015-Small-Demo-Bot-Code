@@ -1,3 +1,5 @@
+#include "globals.h"
+
 #include "blinker.h"
 #include <arduino.h>
 

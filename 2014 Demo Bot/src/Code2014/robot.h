@@ -1,9 +1,8 @@
-
 #ifndef _ROBOT_H
 #define _ROBOT_H
 
 class Robot {
-	public:
+public:
 	Robot();
 
 	void run();
