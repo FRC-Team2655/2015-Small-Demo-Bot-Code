@@ -48,9 +48,9 @@ void setup(void) {
     pinMode(ROLE_PIN, INPUT_PULLUP);
 
     if (digitalRead(ROLE_PIN) == CONTROLLER) {
-        controller = new Controller();
+        controller = new Controller(new Radio(9,10));
     } else {
-        robot = new Robot();
+        robot = new Robot(new Radio(9,10));
     }
 }
 

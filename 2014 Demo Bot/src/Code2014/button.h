@@ -6,7 +6,7 @@ private:
 	bool _pin;
 public:
 	Button(int pin);
-	bool state();
+	bool pressed();
 };
 
 #endif // _BUTTON_H
