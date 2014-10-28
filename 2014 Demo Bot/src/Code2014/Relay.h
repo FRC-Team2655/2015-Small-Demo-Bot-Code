@@ -24,8 +24,8 @@ public:
 	typedef enum {kBothDirections, kForwardOnly, kReverseOnly} Direction;
 
 	Relay(uint32_t channel, Direction direction = kBothDirections);
-	Relay(uint8_t moduleNumber, uint32_t channel, Direction direction = kBothDirections);
-	virtual ~Relay();
+	// Relay(uint8_t moduleNumber, uint32_t channel, Direction direction = kBothDirections);
+	// virtual ~Relay();
 
 	void Set(Value value);
 	// Value Get();
@@ -41,11 +41,20 @@ public:
 	// ITable *m_table;
 
 private:
-	void InitRelay(uint8_t moduleNumber);
+	// void InitRelay(uint8_t moduleNumber);
 
 	uint32_t m_channel;
 	Direction m_direction;
 	// DigitalModule *m_module;
 };
+
+class RelayChannelTable {
+public:
+	RelayChannelTable() {};
+	int forward_pin;
+	int reverse_pin;
+};
+
+//= {{1,2},{3,4},{5,6},{7,8}};
 
 #endif

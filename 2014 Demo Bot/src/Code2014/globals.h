@@ -53,5 +53,4 @@
 const unsigned long MAXINT = 0xFFFFFFFF;
 const unsigned long DEFAULT_PULSE_WIDTH = 500; // ms = 1/2 second
 
-
 #endif // _GLOBAL_H

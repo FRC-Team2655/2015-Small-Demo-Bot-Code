@@ -24,17 +24,10 @@
 #include "robot.h"
 #include "controller.h"
 #include "radio.h"
-//#include "role.h"
 
-// make a blinker
 Blinker blinky(LED_BUILTIN);
-
-// make a radio
 Radio *radio; // radio(9,10); // RADIO_SPI1,RADIO_SPI2);
-
-// get ready to build a robot
 Robot *robot = NULL;
-// or the controller
 Controller *controller = NULL;
 
 void setup(void) {
@@ -54,10 +47,6 @@ void setup(void) {
     }
 }
 
-//
-// Loop
-//
-
 void loop(void)
 {
     if (controller != NULL) {
@@ -65,7 +54,4 @@ void loop(void)
     } else {
         robot->run();
     }
-
-    // OR
-    // controller ? controller->run() : robot->run();
 }

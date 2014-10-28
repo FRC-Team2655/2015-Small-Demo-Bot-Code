@@ -37,8 +37,8 @@ public:
 	
 
 private:
-	void InitCompressor(uint8_t pressureSwitchModuleNumber, uint32_t pressureSwitchChannel,
-				uint8_t compresssorRelayModuleNumber, uint32_t compressorRelayChannel);
+	// void InitCompressor(uint8_t pressureSwitchModuleNumber, uint32_t pressureSwitchChannel,
+	// 			uint8_t compresssorRelayModuleNumber, uint32_t compressorRelayChannel);
 
 	DigitalInput *m_pressureSwitch;
 	Relay *m_relay;

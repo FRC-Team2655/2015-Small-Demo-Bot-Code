@@ -38,21 +38,21 @@ static void CompressorChecker(Compressor *c)
  * 
  * You MUST start the compressor by calling the Start() method.
  */
-void Compressor::InitCompressor(uint8_t pressureSwitchModuleNumber,
-		uint32_t pressureSwitchChannel,
-		uint8_t compresssorRelayModuleNumber,
-		uint32_t compressorRelayChannel)
-{
-	//m_table = NULL;
-	m_enabled = false;
-	// m_pressureSwitch = new DigitalInput(pressureSwitchModuleNumber, pressureSwitchChannel);
-	m_relay = new Relay(compresssorRelayModuleNumber, compressorRelayChannel, Relay::kForwardOnly);
+// void Compressor::InitCompressor(uint8_t pressureSwitchModuleNumber,
+// 		uint32_t pressureSwitchChannel,
+// 		uint8_t compresssorRelayModuleNumber,
+// 		uint32_t compressorRelayChannel)
+// {
+// 	//m_table = NULL;
+// 	m_enabled = false;
+// 	// m_pressureSwitch = new DigitalInput(pressureSwitchModuleNumber, pressureSwitchChannel);
+// 	m_relay = new Relay(compresssorRelayModuleNumber, compressorRelayChannel, Relay::kForwardOnly);
 
-	// if (!m_task.Start((int32_t)this))
-	// {
-	// 	wpi_setWPIError(CompressorTaskError);
-	// }
-}
+// 	// if (!m_task.Start((int32_t)this))
+// 	// {
+// 	// 	wpi_setWPIError(CompressorTaskError);
+// 	// }
+// }
 
 /**
  * Compressor constructor.

@@ -6,6 +6,11 @@
 
 #include "Relay.h"
 
+
+// use the following table to identify the arduino pin mappings from a "channel"
+// channel 0 = the [0]'th element in the table.
+RelayChannelTable rc_channel_table[4]; // = {1,2},{3,4},{5,6},{7,8};
+
 // #include "DigitalModule.h"
 // #include "NetworkCommunication/UsageReporting.h"
 // #include "Resource.h"
@@ -23,10 +28,10 @@
  * 
  * @param moduleNumber The digital module this relay is connected to (1 or 2).
  */
-void Relay::InitRelay (uint8_t moduleNumber)
-{
-	//m_table = NULL;
-	char buf[64];
+// void Relay::InitRelay (uint8_t moduleNumber)
+// {
+// 	//m_table = NULL;
+// 	char buf[64];
 	// Resource::CreateResourceObject(&relayChannels, tDIO::kNumSystems * kRelayChannels * 2);
 	// if (!SensorBase::CheckRelayModule(moduleNumber))
 	// {
@@ -41,33 +46,33 @@ void Relay::InitRelay (uint8_t moduleNumber)
 	// 	return;
 	// }
 
-	if (m_direction == kBothDirections || m_direction == kForwardOnly)
-	{
-		snprintf(buf, 64, "Forward Relay %lu (Module: %d)", m_channel, moduleNumber);
-		// if (relayChannels->Allocate(((moduleNumber - 1) * kRelayChannels + m_channel - 1) * 2, buf) == ~0ul)
-		// {
-		// 	CloneError(relayChannels);
-		// 	return;
-		// }
+// 	if (m_direction == kBothDirections || m_direction == kForwardOnly)
+// 	{
+// 		snprintf(buf, 64, "Forward Relay %lu (Module: %d)", m_channel, moduleNumber);
+// 		// if (relayChannels->Allocate(((moduleNumber - 1) * kRelayChannels + m_channel - 1) * 2, buf) == ~0ul)
+// 		// {
+// 		// 	CloneError(relayChannels);
+// 		// 	return;
+// 		// }
 
-		// nUsageReporting::report(nUsageReporting::kResourceType_Relay, m_channel, moduleNumber - 1);
-	}
-	if (m_direction == kBothDirections || m_direction == kReverseOnly)
-	{
-		// snprintf(buf, 64, "Reverse Relay %lu (Module: %d)", m_channel, moduleNumber);
-		// if (relayChannels->Allocate(((moduleNumber - 1) * kRelayChannels + m_channel - 1) * 2 + 1, buf) == ~0ul)
-		// {
-		// 	CloneError(relayChannels);
-		// 	return;
-		// }
+// 		// nUsageReporting::report(nUsageReporting::kResourceType_Relay, m_channel, moduleNumber - 1);
+// 	}
+// 	if (m_direction == kBothDirections || m_direction == kReverseOnly)
+// 	{
+// 		// snprintf(buf, 64, "Reverse Relay %lu (Module: %d)", m_channel, moduleNumber);
+// 		// if (relayChannels->Allocate(((moduleNumber - 1) * kRelayChannels + m_channel - 1) * 2 + 1, buf) == ~0ul)
+// 		// {
+// 		// 	CloneError(relayChannels);
+// 		// 	return;
+// 		// }
 
-		// nUsageReporting::report(nUsageReporting::kResourceType_Relay, m_channel + 128, moduleNumber - 1);
-	}
-	// m_module = DigitalModule::GetInstance(moduleNumber);
-	// m_module->SetRelayForward(m_channel, false);
-	// m_module->SetRelayReverse(m_channel, false);
-	// LiveWindow::GetInstance()->AddActuator("Relay", moduleNumber, m_channel, this);
-}
+// 		// nUsageReporting::report(nUsageReporting::kResourceType_Relay, m_channel + 128, moduleNumber - 1);
+// 	}
+// 	// m_module = DigitalModule::GetInstance(moduleNumber);
+// 	// m_module->SetRelayForward(m_channel, false);
+// 	// m_module->SetRelayReverse(m_channel, false);
+// 	// LiveWindow::GetInstance()->AddActuator("Relay", moduleNumber, m_channel, this);
+// }
 
 /**
  * Relay constructor given the module and the channel.
@@ -76,12 +81,12 @@ void Relay::InitRelay (uint8_t moduleNumber)
  * @param channel The channel number within the module for this relay.
  * @param direction The direction that the Relay object will control.
  */
-Relay::Relay(uint8_t moduleNumber, uint32_t channel, Relay::Direction direction)
-	: m_channel (channel)
-	, m_direction (direction)
-{
-	InitRelay(moduleNumber);
-}
+// Relay::Relay(uint8_t moduleNumber, uint32_t channel, Relay::Direction direction)
+// 	: m_channel (channel)
+// 	, m_direction (direction)
+// {
+// 	InitRelay(moduleNumber);
+// }
 
 /**
  * Relay constructor given a channel only where the default digital module is used.
@@ -197,27 +202,27 @@ void Relay::Set(Relay::Value value)
  * @return The current state of the relay as a Relay::Value
  */
 // Relay::Value Relay::Get() {
-   // if(m_module->GetRelayForward(m_channel)) {
-	  //  if(m_module->GetRelayReverse(m_channel)) {
-		 //   return kOn;
-	  //  } else {
-		 //   if(m_direction == kForwardOnly) {
-			//    return kOn;
-		 //   } else {
-		 //   return kForward;
-		 //   }
-	  //  }
-   // } else {
-	  //  if(m_module->GetRelayReverse(m_channel)) {
-		 //   if(m_direction == kReverseOnly) {
-			//    return kOn;
-		 //   } else {
-		 //   return kReverse;
-		 //   }
-	  //  } else {
-		 //   return kOff;
-	  //  }
-   // }        
+//    if(m_module->GetRelayForward(m_channel)) {
+// 	   if(m_module->GetRelayReverse(m_channel)) {
+// 		   return kOn;
+// 	   } else {
+// 		   if(m_direction == kForwardOnly) {
+// 			   return kOn;
+// 		   } else {
+// 		   return kForward;
+// 		   }
+// 	   }
+//    } else {
+// 	   if(m_module->GetRelayReverse(m_channel)) {
+// 		   if(m_direction == kReverseOnly) {
+// 			   return kOn;
+// 		   } else {
+// 		   return kReverse;
+// 		   }
+// 	   } else {
+// 		   return kOff;
+// 	   }
+//    }        
 // }
 
 // void Relay::ValueChanged(ITable* source, const std::string& key, EntryValue value, bool isNew) {
