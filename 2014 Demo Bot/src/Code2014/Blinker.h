@@ -3,9 +3,7 @@
 
 #include <arduino.h>
 
-// project demo bot
-
-// authored by Team Tuesday
+// project demo bot blinker code
 
 class Blinker {
 	private:
