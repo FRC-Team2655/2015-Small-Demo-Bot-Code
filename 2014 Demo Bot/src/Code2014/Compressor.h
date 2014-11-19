@@ -9,7 +9,7 @@
 
 #define COMPRESSOR_PRIORITY 90
 
-#include "Relay.h"
+#include "MotorController.h"
 
 
 class DigitalInput;
@@ -17,14 +17,14 @@ class DigitalInput;
 /**
  * Compressor object.
  * The Compressor object is designed to handle the operation of the compressor, pressure sensor and
- * relay for a FIRST robot pneumatics system. The Compressor object starts a task which runs in the
- * backround and periodically polls the pressure sensor and operates the relay that controls the
+ * MotorController for a FIRST robot pneumatics system. The Compressor object starts a task which runs in the
+ * backround and periodically polls the pressure sensor and operates the MotorController that controls the
  * compressor.
  */ 
 
 class Compressor {
 public:
-	Compressor(uint32_t pressureSwitchChannel, uint32_t compressorRelayChannel);
+	Compressor(unsigned int pressureSwitchChannel, unsigned int compressorMotorControllerChannel);
 
 
 	void Run(); // honest john's task emulator
@@ -33,15 +33,15 @@ public:
 	void Stop();
 	bool Enabled();
 	uint32_t GetPressureSwitchValue();
-	void SetRelayValue(Relay::Value relayValue);
+	void SetMotorControllerValue(MotorController::Value MotorControllerValue);
 	
 
 private:
 	// void InitCompressor(uint8_t pressureSwitchModuleNumber, uint32_t pressureSwitchChannel,
-	// 			uint8_t compresssorRelayModuleNumber, uint32_t compressorRelayChannel);
+	// 			uint8_t compresssorMotorControllerModuleNumber, uint32_t compressorMotorControllerChannel);
 
 	DigitalInput *m_pressureSwitch;
-	Relay *m_relay;
+	MotorController *m_MotorController;
 	bool m_enabled;
 	// Task m_task;
 	

@@ -9,7 +9,7 @@
 /**
  * Internal task.
  * 
- * Task which checks the compressor pressure switch and operates the relay as necessary
+ * Task which checks the compressor pressure switch and operates the MotorController as necessary
  * depending on the pressure.
  * 
  * Do not call this function directly.
@@ -20,11 +20,11 @@ static void CompressorChecker(Compressor *c)
 	{
 		if (c->Enabled())
 		{
-			c->SetRelayValue( c->GetPressureSwitchValue() == 0 ? Relay::kOn : Relay::kOff );
+			c->SetMotorControllerValue( c->GetPressureSwitchValue() == 0 ? MotorController::kOn : MotorController::kOff );
 		}
 		else
 		{
-			c->SetRelayValue(Relay::kOff);
+			c->SetMotorControllerValue(MotorController::kOff);
 		}
 		//Wait(0.5);
 	}
@@ -33,20 +33,20 @@ static void CompressorChecker(Compressor *c)
 /**
  * Initialize the Compressor object.
  * This method is the common initialization code for all the constructors for the Compressor
- * object. It takes the relay channel and pressure switch channel and spawns a task that polls the
+ * object. It takes the MotorController channel and pressure switch channel and spawns a task that polls the
  * compressor and sensor.
  * 
  * You MUST start the compressor by calling the Start() method.
  */
 // void Compressor::InitCompressor(uint8_t pressureSwitchModuleNumber,
 // 		uint32_t pressureSwitchChannel,
-// 		uint8_t compresssorRelayModuleNumber,
-// 		uint32_t compressorRelayChannel)
+// 		uint8_t compresssorMotorControllerModuleNumber,
+// 		uint32_t compressorMotorControllerChannel)
 // {
 // 	//m_table = NULL;
 // 	m_enabled = false;
 // 	// m_pressureSwitch = new DigitalInput(pressureSwitchModuleNumber, pressureSwitchChannel);
-// 	m_relay = new Relay(compresssorRelayModuleNumber, compressorRelayChannel, Relay::kForwardOnly);
+// 	m_MotorController = new MotorController(compresssorMotorControllerModuleNumber, compressorMotorControllerChannel, MotorController::kForwardOnly);
 
 // 	// if (!m_task.Start((int32_t)this))
 // 	// {
@@ -56,44 +56,44 @@ static void CompressorChecker(Compressor *c)
 
 /**
  * Compressor constructor.
- * Given a fully specified relay channel and pressure switch channel, initialize the Compressor object.
+ * Given a fully specified MotorController channel and pressure switch channel, initialize the Compressor object.
  * 
  * You MUST start the compressor by calling the Start() method.
  * 
  * @param pressureSwitchModuleNumber The digital module that the pressure switch is attached to.
  * @param pressureSwitchChannel The GPIO channel that the pressure switch is attached to.
- * @param compresssorRelayModuleNumber The digital module that the compressor relay is attached to.
- * @param compressorRelayChannel The relay channel that the compressor relay is attached to.
+ * @param compresssorMotorControllerModuleNumber The digital module that the compressor MotorController is attached to.
+ * @param compressorMotorControllerChannel The MotorController channel that the compressor MotorController is attached to.
  */
 // Compressor::Compressor(uint8_t pressureSwitchModuleNumber,
 // 		uint32_t pressureSwitchChannel,
-// 		uint8_t compresssorRelayModuleNumber,
-// 		uint32_t compressorRelayChannel)
+// 		uint8_t compresssorMotorControllerModuleNumber,
+// 		uint32_t compressorMotorControllerChannel)
 // 	//: m_task ("Compressor", (FUNCPTR)CompressorChecker)
 // {
 // 	InitCompressor(pressureSwitchModuleNumber,
 // 		pressureSwitchChannel,
-// 		compresssorRelayModuleNumber,
-// 		compressorRelayChannel);
+// 		compresssorMotorControllerModuleNumber,
+// 		compressorMotorControllerChannel);
 // }
 
 /**
  * Compressor constructor.
- * Given a relay channel and pressure switch channel (both in the default digital module), initialize
+ * Given a MotorController channel and pressure switch channel (both in the default digital module), initialize
  * the Compressor object.
  * 
  * You MUST start the compressor by calling the Start() method.
  * 
  * @param pressureSwitchChannel The GPIO channel that the pressure switch is attached to.
- * @param compressorRelayChannel The relay channel that the compressor relay is attached to.
+ * @param compressorMotorControllerChannel The MotorController channel that the compressor MotorController is attached to.
  */
-Compressor::Compressor(uint32_t pressureSwitchChannel, uint32_t compressorRelayChannel)
+Compressor::Compressor(unsigned int pressureSwitchChannel, unsigned int compressorMotorControllerChannel)
 	//: m_task ("Compressor", (FUNCPTR)CompressorChecker)
 {
 	// InitCompressor(GetDefaultDigitalModule(),
 	// 		pressureSwitchChannel,
 	// 		GetDefaultDigitalModule(),
-	// 		compressorRelayChannel);
+	// 		compressorMotorControllerChannel);
 }
 
 /**
@@ -103,13 +103,13 @@ Compressor::Compressor(uint32_t pressureSwitchChannel, uint32_t compressorRelayC
  */
 
 /**
- * Operate the relay for the compressor.
- * Change the value of the relay output that is connected to the compressor motor.
+ * Operate the MotorController for the compressor.
+ * Change the value of the MotorController output that is connected to the compressor motor.
  * This is only intended to be called by the internal polling thread.
  */
-void Compressor::SetRelayValue(Relay::Value relayValue)
+void Compressor::SetMotorControllerValue(MotorController::Value MotorControllerValue)
 {
-	m_relay->Set(relayValue);
+	m_MotorController->Set(MotorControllerValue);
 }
 
 /**
