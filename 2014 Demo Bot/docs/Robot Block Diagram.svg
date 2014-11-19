@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="Robot Block Diagram.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="306.98252"
+     inkscape:cy="610.86256"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1858"
+     inkscape:window-height="1059"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#e6e6e6;fill-opacity:1;stroke:none"
+       id="rect2985"
+       width="471.42859"
+       height="487.67154"
+       x="100.35712"
+       y="221.04803"
+       inkscape:export-filename="C:\Users\Mr. President\Desktop\Robot Block Diagram.png"
+       inkscape:export-xdpi="190.82516"
+       inkscape:export-ydpi="190.82516" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3832"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;opacity:0.87000002;fill:#000000;fill-opacity:1;stroke:none;font-family:Noto Sans;-inkscape-font-specification:Noto Sans"
+       transform="translate(80.366333,-6)"><flowRegion
+         id="flowRegion3834"><rect
+           id="rect3836"
+           width="233.34523"
+           height="51.51778"
+           x="197.9899"
+           y="234.64369"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Noto Sans;-inkscape-font-specification:Noto Sans" /></flowRegion><flowPara
+         id="flowPara3838"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Noto Sans;-inkscape-font-specification:Noto Sans">Robot</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4327"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Sans;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
+         id="flowRegion4329"><rect
+           id="rect4331"
+           width="213.57143"
+           height="76.071426"
+           x="174.28572"
+           y="305.93362" /></flowRegion><flowPara
+         id="flowPara4333" /></flowRoot>    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#00800f;stroke-width:1.25000000000000000;stroke-miterlimit:4;stroke-opacity:0.94117647;stroke-dasharray:none"
+       id="rect2987"
+       width="132.40315"
+       height="47.142857"
+       x="118.5724"
+       y="637.20074" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3791"
+       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;opacity:0.87000002;fill:#ff0000;fill-opacity:1;stroke:none;font-family:noto;-inkscape-font-specification:noto"
+       transform="translate(2.6021042,-0.6649959)"><flowRegion
+         id="flowRegion3793"><rect
+           id="rect3795"
+           width="222.14285"
+           height="42.857143"
+           x="124.28571"
+           y="646.64789"
+           style="font-size:20px;fill:#ff0000;font-family:noto;-inkscape-font-specification:noto" /></flowRegion><flowPara
+         id="flowPara3797"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff0000;font-family:Noto Sans;-inkscape-font-specification:Noto Sans">Compressor</flowPara></flowRoot>    <rect
+       y="637.20074"
+       x="269.86984"
+       height="47.142857"
+       width="132.40315"
+       id="rect3000"
+       style="fill:#ffffff;fill-opacity:1;stroke:#00800f;stroke-width:1.25000000000000000;stroke-miterlimit:4;stroke-opacity:0.94117647;stroke-dasharray:none" />
+    <flowRoot
+       transform="translate(150.30579,-0.5380428)"
+       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;opacity:0.87000002;fill:#ff0000;fill-opacity:1;stroke:none;font-family:noto;-inkscape-font-specification:noto"
+       id="flowRoot3816"
+       xml:space="preserve"><flowRegion
+         id="flowRegion3818"><rect
+           style="font-size:20px;fill:#ff0000;font-family:noto;-inkscape-font-specification:noto"
+           y="646.64789"
+           x="124.28571"
+           height="42.857143"
+           width="222.14285"
+           id="rect3820" /></flowRegion><flowPara
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff0000;font-family:Noto Sans;-inkscape-font-specification:Noto Sans"
+         id="flowPara3822">Drive System</flowPara></flowRoot>    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#00800f;stroke-width:1.25000000000000000;stroke-miterlimit:4;stroke-opacity:0.94117647;stroke-dasharray:none"
+       id="rect3002"
+       width="132.40315"
+       height="47.142857"
+       x="421.16727"
+       y="637.20074" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3824"
+       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;opacity:0.87000002;fill:#ff0000;fill-opacity:1;stroke:none;font-family:noto;-inkscape-font-specification:noto"
+       transform="translate(329.28876,1.9961369)"><flowRegion
+         id="flowRegion3826"><rect
+           id="rect3828"
+           width="222.14285"
+           height="42.857143"
+           x="124.28571"
+           y="646.64789"
+           style="font-size:20px;fill:#ff0000;font-family:noto;-inkscape-font-specification:noto" /></flowRegion><flowPara
+         id="flowPara3830"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff0000;font-family:Noto Sans;-inkscape-font-specification:Noto Sans">Blinker</flowPara></flowRoot>    <rect
+       y="293.42633"
+       x="118.61998"
+       height="325.83447"
+       width="308.65875"
+       id="rect4224"
+       style="fill:#ffffff;fill-opacity:1;stroke:#00800f;stroke-width:1.25000000000000000;stroke-miterlimit:4;stroke-opacity:0.94117647;stroke-dasharray:none" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#00800f;stroke-width:1.25000000000000000;stroke-miterlimit:4;stroke-opacity:0.94117647;stroke-dasharray:none"
+       id="rect3882"
+       width="108.65173"
+       height="51.418167"
+       x="444.87109"
+       y="293.42398" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3884"
+       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;opacity:0.87000002;fill:#ff0000;fill-opacity:1;stroke:none;font-family:noto;-inkscape-font-specification:noto"
+       transform="matrix(1.0960093,0,0,1.0909131,318.72043,-402.0485)"><flowRegion
+         id="flowRegion3886"><rect
+           id="rect3888"
+           width="222.14285"
+           height="42.857143"
+           x="124.28571"
+           y="646.64789"
+           style="font-size:20px;fill:#ff0000;font-family:noto;-inkscape-font-specification:noto" /></flowRegion><flowPara
+         id="flowPara3890"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff0000;font-family:Noto Sans;-inkscape-font-specification:Noto Sans">Joystick 1</flowPara></flowRoot>    <rect
+       y="361.9725"
+       x="444.8718"
+       height="51.57452"
+       width="108.65029"
+       id="rect3872"
+       style="fill:#ffffff;fill-opacity:1;stroke:#00800f;stroke-width:1.25000000000000000;stroke-miterlimit:4;stroke-opacity:0.94117647;stroke-dasharray:none" />
+    <flowRoot
+       transform="matrix(1.0960093,0,0,1.0909131,316.91158,-333.42179)"
+       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;opacity:0.87000002;fill:#ff0000;fill-opacity:1;stroke:none;font-family:noto;-inkscape-font-specification:noto"
+       id="flowRoot3874"
+       xml:space="preserve"><flowRegion
+         id="flowRegion3876"><rect
+           style="font-size:20px;fill:#ff0000;font-family:noto;-inkscape-font-specification:noto"
+           y="646.64789"
+           x="124.28571"
+           height="42.857143"
+           width="222.14285"
+           id="rect3878" /></flowRegion><flowPara
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff0000;font-family:Noto Sans;-inkscape-font-specification:Noto Sans"
+         id="flowPara3880">Joystick 2</flowPara></flowRoot>    <rect
+       y="430.67737"
+       x="444.93799"
+       height="51.441689"
+       width="108.51792"
+       id="rect3892"
+       style="fill:#ffffff;fill-opacity:1;stroke:#00800f;stroke-width:1.25000000000000000;stroke-miterlimit:4;stroke-opacity:0.94117647;stroke-dasharray:none" />
+    <flowRoot
+       transform="matrix(1.0960093,0,0,1.0909131,338.16817,-264.78336)"
+       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;opacity:0.87000002;fill:#ff0000;fill-opacity:1;stroke:none;font-family:noto;-inkscape-font-specification:noto"
+       id="flowRoot3894"
+       xml:space="preserve"><flowRegion
+         id="flowRegion3896"><rect
+           style="font-size:20px;fill:#ff0000;font-family:noto;-inkscape-font-specification:noto"
+           y="646.64789"
+           x="124.28571"
+           height="42.857143"
+           width="222.14285"
+           id="rect3898" /></flowRegion><flowPara
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff0000;font-family:Noto Sans;-inkscape-font-specification:Noto Sans"
+         id="flowPara3900">Gyro</flowPara></flowRoot>    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#00800f;stroke-width:1.25000000000000000;stroke-miterlimit:4;stroke-opacity:0.94117647;stroke-dasharray:none"
+       id="rect3902"
+       width="108.51792"
+       height="51.441689"
+       x="444.93799"
+       y="499.24945" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3904"
+       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;opacity:0.87000002;fill:#ff0000;fill-opacity:1;stroke:none;font-family:noto;-inkscape-font-specification:noto"
+       transform="matrix(1.0960093,0,0,1.0909131,333.34103,-196.21127)"><flowRegion
+         id="flowRegion3906"><rect
+           id="rect3908"
+           width="222.14285"
+           height="42.857143"
+           x="124.28571"
+           y="646.64789"
+           style="font-size:20px;fill:#ff0000;font-family:noto;-inkscape-font-specification:noto" /></flowRegion><flowPara
+         id="flowPara3910"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff0000;font-family:Noto Sans;-inkscape-font-specification:Noto Sans">Radio</flowPara></flowRoot>    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#00800f;stroke-width:1.25000000000000000;stroke-miterlimit:4;stroke-opacity:0.94117647;stroke-dasharray:none"
+       id="rect4078"
+       width="108.51792"
+       height="51.441689"
+       x="444.93799"
+       y="567.82159" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4080"
+       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;opacity:0.87000002;fill:#ff0000;fill-opacity:1;stroke:none;font-family:noto;-inkscape-font-specification:noto"
+       transform="matrix(1.0960093,0,0,1.0909131,321.90462,-127.6392)"><flowRegion
+         id="flowRegion4082"><rect
+           id="rect4084"
+           width="222.14285"
+           height="42.857143"
+           x="124.28571"
+           y="646.64789"
+           style="font-size:20px;fill:#ff0000;font-family:noto;-inkscape-font-specification:noto" /></flowRegion><flowPara
+         id="flowPara4086"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff0000;font-family:Noto Sans;-inkscape-font-specification:Noto Sans">Buttons</flowPara></flowRoot>    <flowRoot
+       transform="matrix(1.0960093,0,0,1.0909131,72.720017,-402.0485)"
+       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;opacity:0.87000002;fill:#ff0000;fill-opacity:1;stroke:none;font-family:noto;-inkscape-font-specification:noto"
+       id="flowRoot4335"
+       xml:space="preserve"><flowRegion
+         id="flowRegion4337"><rect
+           style="font-size:20px;fill:#ff0000;font-family:noto;-inkscape-font-specification:noto"
+           y="646.64789"
+           x="124.28571"
+           height="42.857143"
+           width="222.14285"
+           id="rect4339" /></flowRegion><flowPara
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff0000;font-family:Noto Sans;-inkscape-font-specification:Noto Sans"
+         id="flowPara4341">Ball Handler</flowPara></flowRoot>    <rect
+       y="341.3736"
+       x="300.19785"
+       height="51.418167"
+       width="108.65173"
+       id="rect4343"
+       style="fill:#e6e6e6;fill-opacity:1;stroke:#00800f;stroke-width:1.25000000000000000;stroke-miterlimit:4;stroke-opacity:0.94117647;stroke-dasharray:none" />
+    <rect
+       style="fill:#e6e6e6;fill-opacity:1;stroke:#00800f;stroke-width:1.25000000000000000;stroke-miterlimit:4;stroke-opacity:0.94117647;stroke-dasharray:none"
+       id="rect4353"
+       width="139.88985"
+       height="156.51117"
+       x="140.33818"
+       y="341.53036" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4355"
+       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;opacity:0.87000002;fill:#ff0000;fill-opacity:1;stroke:none;font-family:noto;-inkscape-font-specification:noto"
+       transform="matrix(1.0960093,0,0,1.0909131,24.952634,-360.80346)"><flowRegion
+         id="flowRegion4357"><rect
+           id="rect4359"
+           width="222.14285"
+           height="42.857143"
+           x="124.28571"
+           y="646.64789"
+           style="font-size:20px;fill:#ff0000;font-family:noto;-inkscape-font-specification:noto" /></flowRegion><flowPara
+         id="flowPara4361"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff0000;font-family:Noto Sans;-inkscape-font-specification:Noto Sans">Launcher</flowPara></flowRoot>    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#00800f;stroke-width:1.25000000000000000;stroke-miterlimit:4;stroke-opacity:0.94117647;stroke-dasharray:none"
+       id="rect4363"
+       width="108.65029"
+       height="51.57452"
+       x="155.95795"
+       y="374.01822" />
+    <g
+       id="g4665"
+       transform="matrix(1.0960093,0,0,1.0897671,-29.642735,-34.134873)"
+       style="fill:#ffffff;stroke-width:1.14376307000000010;stroke-miterlimit:4;stroke-dasharray:none;stroke:#00800f;stroke-opacity:0.94117647">
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:#00800f;stroke-width:1.14376307000000010;stroke-miterlimit:4;stroke-opacity:0.94117647;stroke-dasharray:none"
+         id="rect4629"
+         width="99.132637"
+         height="47.326187"
+         x="169.34225"
+         y="429.47906" />
+    </g>
+    <g
+       id="g4751"
+       transform="matrix(1.0960093,0,0,1.0897671,-32.230848,-40.044746)">
+      <flowRoot
+         xml:space="preserve"
+         id="flowRoot4345"
+         style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;opacity:0.87000002;fill:#ff0000;fill-opacity:1;stroke:none;font-family:noto;-inkscape-font-specification:noto"
+         transform="matrix(1,0,0,1.0010515,199.42411,-291.76)"><flowRegion
+           id="flowRegion4347"><rect
+             id="rect4349"
+             width="222.14285"
+             height="42.857143"
+             x="124.28571"
+             y="646.64789"
+             style="font-size:20px;fill:#ff0000;font-family:noto;-inkscape-font-specification:noto" /></flowRegion><flowPara
+           id="flowPara4351"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff0000;font-family:Noto Sans;-inkscape-font-specification:Noto Sans">Turret</flowPara></flowRoot>      <flowRoot
+         transform="translate(27.142857,9.428571)"
+         style="font-size:12px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         id="flowRoot4679"
+         xml:space="preserve"><flowRegion
+           id="flowRegion4681"><rect
+             style="font-size:12px"
+             y="366.64789"
+             x="282.14285"
+             height="81.428574"
+             width="147.14285"
+             id="rect4683" /></flowRegion><flowPara
+           id="flowPara4685">Motor Controller</flowPara></flowRoot>    </g>
+    <g
+       id="g4741"
+       transform="matrix(1.0960093,0,0,1.0897671,-11.650996,-40.852087)">
+      <flowRoot
+         xml:space="preserve"
+         id="flowRoot4633"
+         style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;opacity:0.87000002;fill:#ff0000;fill-opacity:1;stroke:none;font-family:noto;-inkscape-font-specification:noto"
+         transform="matrix(1,0,0,1.0010515,48.582728,-262.70668)"><flowRegion
+           id="flowRegion4635"><rect
+             id="rect4637"
+             width="222.14285"
+             height="42.857143"
+             x="124.28571"
+             y="646.64789"
+             style="font-size:20px;fill:#ff0000;font-family:noto;-inkscape-font-specification:noto" /></flowRegion><flowPara
+           id="flowPara4639"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff0000;font-family:Noto Sans;-inkscape-font-specification:Noto Sans">Spoon</flowPara></flowRoot>      <flowRoot
+         style="font-size:12px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         id="flowRoot4679-2"
+         xml:space="preserve"
+         transform="translate(-102.87528,42.116829)"><flowRegion
+           id="flowRegion4681-6"><rect
+             style="font-size:12px"
+             y="366.64789"
+             x="282.14285"
+             height="81.428574"
+             width="147.14285"
+             id="rect4683-0" /></flowRegion><flowPara
+           id="flowPara4685-4">Solenoid</flowPara></flowRoot>    </g>
+    <g
+       id="g4726"
+       transform="matrix(1.0960093,0,0,1.0897671,-32.267325,-40.662161)">
+      <flowRoot
+         xml:space="preserve"
+         id="flowRoot4657"
+         style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;opacity:0.87000002;fill:#ff0000;fill-opacity:1;stroke:none;font-family:noto;-inkscape-font-specification:noto"
+         transform="matrix(1,0,0,1.0010515,56.099148,-207.75998)"><flowRegion
+           id="flowRegion4659"><rect
+             id="rect4661"
+             width="222.14285"
+             height="42.857143"
+             x="124.28571"
+             y="646.64789"
+             style="font-size:20px;fill:#ff0000;font-family:noto;-inkscape-font-specification:noto" /></flowRegion><flowPara
+           id="flowPara4663"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff0000;font-family:Noto Sans;-inkscape-font-specification:Noto Sans">Flywheel</flowPara></flowRoot>      <flowRoot
+         xml:space="preserve"
+         id="flowRoot4714"
+         style="font-size:12px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         transform="translate(-104.42917,97.42857)"><flowRegion
+           id="flowRegion4716"><rect
+             id="rect4718"
+             width="147.14285"
+             height="81.428574"
+             x="282.14285"
+             y="366.64789"
+             style="font-size:12px" /></flowRegion><flowPara
+           id="flowPara4720">Motor Controller</flowPara></flowRoot>    </g>
+  </g>
+</svg>

@@ -16,42 +16,42 @@
  * Every time the buttons change on the remote, the entire state of
  * buttons is send to the led board, which displays the state.
  */
-#include <pins_arduino.h>
-#include <arduino.h>
-#include "globals.h"
+ #include <pins_arduino.h>
+ #include <arduino.h>
+ #include "globals.h"
 
-#include "blinker.h"
-#include "robot.h"
-#include "controller.h"
-#include "radio.h"
+ #include "blinker.h"
+ #include "robot.h"
+ #include "controller.h"
+ #include "radio.h"
 
-Blinker blinky(LED_BUILTIN);
+ Blinker blinky(LED_BUILTIN);
 Radio *radio; // radio(9,10); // RADIO_SPI1,RADIO_SPI2);
 Robot *robot = NULL;
 Controller *controller = NULL;
 
 void setup(void) {
 
-    Serial.begin(9600);
+	Serial.begin(9600);
 
-    radio = new Radio(9,10);
-    
-    radio->begin();
+	radio = new Radio(9,10);
+	
+	radio->begin();
 
-    pinMode(ROLE_PIN, INPUT_PULLUP);
+	pinMode(ROLE_PIN, INPUT_PULLUP);
 
-    if (digitalRead(ROLE_PIN) == CONTROLLER) {
-        controller = new Controller(new Radio(9,10));
-    } else {
-        robot = new Robot(new Radio(9,10));
-    }
-}
+	if (digitalRead(ROLE_PIN) == CONTROLLER) {
+		controller = new Controller(new Radio(9,10));
+		} else {
+			robot = new Robot(new Radio(9,10));
+		}
+	}
 
-void loop(void)
-{
-    if (controller != NULL) {
-        controller->run();
-    } else {
-        robot->run();
-    }
-}
+	void loop(void)
+	{
+		if (controller != NULL) {
+			controller->run();
+			} else {
+				robot->run();
+			}
+		}
