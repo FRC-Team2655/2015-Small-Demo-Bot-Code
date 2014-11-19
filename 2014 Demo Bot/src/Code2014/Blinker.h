@@ -3,6 +3,9 @@
 
 #include <arduino.h>
 
+// project demo bot
+
+// authored by Team Tuesday
 
 class Blinker {
 	private:
