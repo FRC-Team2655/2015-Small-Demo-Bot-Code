@@ -24,14 +24,16 @@
  #include "robot.h"
  #include "controller.h"
  #include "radio.h"
+ #include "MotorController.h"
 
- Blinker blinky(LED_BUILTIN);
+
+
+ // Blinker blinky(LED_BUILTIN);
 Radio *radio; // radio(9,10); // RADIO_SPI1,RADIO_SPI2);
 Robot *robot = NULL;
 Controller *controller = NULL;
 
 void setup(void) {
-
 	Serial.begin(9600);
 
 	radio = new Radio(9,10);
