@@ -31,7 +31,7 @@ void Controller::run() {
     else
       printf("failed\n\r");
 
-  	if (button1->pressed()) {
+  	if (button1->isPushed()) {
 
   	}
 }

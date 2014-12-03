@@ -37,4 +37,4 @@ class Button{
 
 		// read the button
 		void readIt();
-}
+};

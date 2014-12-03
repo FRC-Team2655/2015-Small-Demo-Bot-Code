@@ -4,13 +4,13 @@
 // Updated the next day by John Bate
 
 #include <arduino.h>
-#include "Button2.h"
+#include "Button.h"
 
 // I love one liners.....
 // ...but what does it all mean? See if you can figure it all out
 
 Button::Button(int pinNumber) : lastState(false), currentState(false), pinNum(pinNumber) {
-	pinmode(pinNum, INPUT);
+	pinMode(pinNum, INPUT);
 }
 // What's with the upperAndLower case names?
 int Button::getPinNum() {
