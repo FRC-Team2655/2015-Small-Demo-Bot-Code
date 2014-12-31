@@ -17,13 +17,11 @@ public class Lifter {
         timer = new TeamTimer();
     }
 
-    public void lift() {
+    public void raiseTheBall() {
         lifter.set(DoubleSolenoid.Value.kForward);
         TeamTimer.delay(100);
         lifter.set(DoubleSolenoid.Value.kOff);
-    }
-
-    public void lower() {
+        TeamTimer.delay(100);
         lifter.set(DoubleSolenoid.Value.kReverse);
         TeamTimer.delay(100);
         lifter.set(DoubleSolenoid.Value.kOff);
