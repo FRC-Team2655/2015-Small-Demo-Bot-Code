@@ -3,14 +3,17 @@ package edu.wpi.first.wpilibj.templates;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 public class BallHandler {
-    
+
     CompressorSystem ballHandlerCompressor;
     private int airTankRefreshWait;
 
     BallHandler() {
         ballHandlerCompressor = new CompressorSystem();
         airTankRefreshWait = 0;
+    }
 
+    public void shoot() {
+        
     }
 
     public void displayPressure() {

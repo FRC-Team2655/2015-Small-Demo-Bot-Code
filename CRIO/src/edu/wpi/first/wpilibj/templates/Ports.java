@@ -9,7 +9,7 @@ public final class Ports {
     // PWM channels
     public final static int rightMotorChannel = Ports.DSCPWM.ch1;
     public final static int leftMotorChannel = Ports.DSCPWM.ch2;
-//    public final static int unusedPWMChannel_3 = Ports.DSCPWM.ch3;
+    public final static int flyWheelMotorChannel = Ports.DSCPWM.ch3;
 //    public final static int unusedPWMChannel_4 = Ports.DSCPWM.ch4;
 //    public final static int unusedPWMChannel_5 = Ports.DSCPWM.ch5;
 //    public final static int unusedPWMChannel_6 = Ports.DSCPWM.ch6;
