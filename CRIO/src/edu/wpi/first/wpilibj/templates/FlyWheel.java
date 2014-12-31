@@ -10,7 +10,7 @@ public class FlyWheel {
 
     Talon flyWheel;
 
-    int speed;
+    private double speed;
 
     FlyWheel() {
         flyWheel = new Talon(Ports.flyWheelMotorChannel);
@@ -19,7 +19,7 @@ public class FlyWheel {
 
     public void spinUp() {
         if (speed < 1 && speed > 0) {
-            speed++;
+            speed = speed + 0.1;
         } else {
             speed = 0;
         }
@@ -28,16 +28,15 @@ public class FlyWheel {
     }
 
     public void spinDown() {
-        if (speed < 1 && speed > 0) {
-            speed--;
+        if (speed < 1 && speed >= 0) {
+            speed = speed - 0.1;
         } else {
             speed = 0;
         }
         flyWheel.set(speed);
     }
 
-    public void turnOff() {
-        speed = 0;
-        flyWheel.set(speed);
+    public double getSpeed() {
+        return speed;
     }
 }
