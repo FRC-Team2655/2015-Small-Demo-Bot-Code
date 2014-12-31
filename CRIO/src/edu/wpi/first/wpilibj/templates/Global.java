@@ -22,6 +22,8 @@ public class Global {
     public final static int shootButton = 1;
     public final static int passButton = 2;
     public final static int liftButton = 3;
+    public final static int flywheelSpeedUpButton = 4;
+    public final static int flywheelSpeedDownButton = 5;
 
 // compressor constants
     public final static double psiSlope = 43.5;

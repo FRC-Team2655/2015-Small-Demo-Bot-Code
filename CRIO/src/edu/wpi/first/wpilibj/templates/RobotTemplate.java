@@ -7,16 +7,22 @@ public class RobotTemplate extends IterativeRobot {
     private DriveSystem driveSystem;
     private BallHandler BallHandler;
     private TeamJoystick joystick;
+    //suspension?
+
     private Button shootButton;
-    private Button passButton;
-    private Button liftButton;
+    private Button suspensionButton;
+    private Button flywheelSpeedUpButton;
+    private Button flywheelSpeedDownButton;
 
     public void robotInit() {
-        joystick = new TeamJoystick(1);
-        shootButton = new Button(joystick, Global.shootButton);
-        passButton = new Button(joystick, Global.passButton);
-        liftButton = new Button(joystick, Global.liftButton);
         driveSystem = new DriveSystem(joystick);
+
+        joystick = new TeamJoystick(1);
+
+        shootButton = new Button(joystick, Global.shootButton);
+        suspensionButton = new Button(joystick, Global.liftButton);
+        flywheelSpeedUpButton = new Button(joystick, Global.flywheelSpeedUpButton);
+        flywheelSpeedDownButton = new Button(joystick, Global.flywheelSpeedDownButton);
     }
 
     public void teleopInit() {
@@ -24,8 +30,17 @@ public class RobotTemplate extends IterativeRobot {
     }
 
     public void teleopPeriodic() {
-        if (shootButton.isPressed()) {
-        } else if (liftButton.isPressed()) {
+        if (shootButton.theButtonToggled()) {
+            BallHandler.shoot();
+        }
+        if (suspensionButton.theButtonToggled()) {
+           //Merr?
+        }
+        if (flywheelSpeedUpButton.theButtonToggled()) {
+            BallHandler.flyWheel.spinUp();
+        }
+        if (flywheelSpeedDownButton.theButtonToggled()) {
+            BallHandler.flyWheel.spinDown();
         }
     }
 
