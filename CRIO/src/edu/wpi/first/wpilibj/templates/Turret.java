@@ -11,15 +11,16 @@ public class Turret {
 
     private DigitalInput backLeftLimitSwitch;
     private DigitalInput backRightLimitSwitch;
-
+    private FlyWheel flywheel;
     private Relay spike;
 
     public Turret() {
-        Relay spike = new Relay(Ports.turretRotationMotorChannel);
-
+        spike = new Relay(Ports.turretRotationMotorChannel);
+        
         backLeftLimitSwitch = new DigitalInput(Ports.backLeftTurretLimitSwitchChannel);
         backRightLimitSwitch = new DigitalInput(Ports.backLeftTurretLimitSwitchChannel);
-
+        
+        flywheel = new FlyWheel();
     }
 
     void turnLeft(boolean direction) {
@@ -40,4 +41,13 @@ public class Turret {
     void turnOff() {
         spike.set(Relay.Value.kOff);
     }
+    
+    void spinUp(){
+        flywheel.spinUp();
+    }
+    
+    void spinDown(){
+        flywheel.spinDown();
+    }
+    
 }

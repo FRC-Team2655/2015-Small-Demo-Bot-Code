@@ -5,10 +5,33 @@
  */
 package edu.wpi.first.wpilibj.templates;
 
+import edu.wpi.first.wpilibj.DoubleSolenoid;
+
 /**
  *
- * @author Zephan
+ * @author Josh
  */
+
+//NOT SURE IF THIS IS GONNA WORK
 public class Suspension {
-    
+    TeamDoubleSolenoid lifter;
+    TeamTimer timer;
+
+    public Suspension() {
+        lifter = new TeamDoubleSolenoid(Ports.suspensionSolenoidForwardChannel, Ports.suspensionSolenoidReverseChannel);
+        lifter.set(DoubleSolenoid.Value.kOff);
+        timer = new TeamTimer();
+    }
+
+    public void lift() {
+        lifter.set(DoubleSolenoid.Value.kForward);
+        TeamTimer.delay(100);
+        lifter.set(DoubleSolenoid.Value.kOff);
+    }
+
+    public void lower() {
+        lifter.set(DoubleSolenoid.Value.kReverse);
+        TeamTimer.delay(100);
+        lifter.set(DoubleSolenoid.Value.kOff);
+    }
 }
