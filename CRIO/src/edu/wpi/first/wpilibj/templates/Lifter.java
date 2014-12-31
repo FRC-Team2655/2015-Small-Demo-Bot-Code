@@ -12,7 +12,7 @@ public class Lifter {
     TeamTimer timer;
 
     Lifter() {
-        lifter = new TeamDoubleSolenoid(Ports.SM.ch1, Ports.SM.ch2);
+        lifter = new TeamDoubleSolenoid(Ports.lifterUpChannel, Ports.lifterDownChannel);
         lifter.set(DoubleSolenoid.Value.kOff);
         timer = new TeamTimer();
     }

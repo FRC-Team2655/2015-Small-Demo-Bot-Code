@@ -47,6 +47,8 @@ public final class Ports {
     // solenoid module 1
 //    public final static int unusedSMChannel_1 = Ports.SM.ch1;
 //    public final static int unusedSMChannel_2 = Ports.SM.ch2;
+    public final static int lifterUpChannel = Ports.SM.ch1;
+    public final static int lifterDownChannel = Ports.SM.ch2;
     public final static int suspensionSolenoidForwardChannel = Ports.SM.ch3;
     public final static int suspensionSolenoidReverseChannel = Ports.SM.ch4;
 //    public final static int unusedSMChannel_5 = Ports.SM.ch5;
