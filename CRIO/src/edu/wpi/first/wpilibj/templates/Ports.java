@@ -45,8 +45,8 @@ public final class Ports {
 //    public final static int unusedRelayChannel_8 = Ports.DSCRelay.ch8;
 
     // solenoid module 1
-//    public final static int unusedSMChannel_1 = Ports.SM.ch1;
-//    public final static int unusedSMChannel_2 = Ports.SM.ch2;
+    public final static int lifterUpChannel = Ports.SM.ch1;
+    public final static int lifterDownChannel = Ports.SM.ch2;
 //    public final static int unusedSMChannel_3 = Ports.SM.ch3;
 //    public final static int unusedSMChannel_4 = Ports.SM.ch4;
 //    public final static int unusedSMChannel_5 = Ports.SM.ch5;
