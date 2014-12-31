@@ -20,8 +20,8 @@ public final class Ports {
 
     // Digital SideCar DIO
     public final static int pressureSwitchChannel = Ports.DSCDIO.ch1;
-//    public final static int unusedDIOChannel_2 = Ports.DSCDIO.ch2;
-//    public final static int unusedDIOChannel_3 = Ports.DSCDIO.ch3;
+    public final static int backLeftTurretLimitSwitchChannel = Ports.DSCDIO.ch2;
+    public final static int backRightTurretLimitSwitchChannel = Ports.DSCDIO.ch3;
 //    public final static int unusedDIOChannel_4 = Ports.DSCDIO.ch4;
 //    public final static int unusedDIOChannel_5 = Ports.DSCDIO.ch5;
 //    public final static int unusedDIOChannel_6 = Ports.DSCDIO.ch6;
@@ -36,7 +36,7 @@ public final class Ports {
 
     // Digital SideCar Relays
     public final static int compressorMotorControlChannel = Ports.DSCRelay.ch1;
-//    public final static int unusedRelayChannel_2 = Ports.DSCRelay.ch2;
+    public final static int turretRotationMotorChannel = Ports.DSCRelay.ch2;
 //    public final static int unusedRelayChannel_3 = Ports.DSCRelay.ch3;
 //    public final static int unusedRelayChannel_4 = Ports.DSCRelay.ch4;
 //    public final static int unusedRelayChannel_5 = Ports.DSCRelay.ch5;
