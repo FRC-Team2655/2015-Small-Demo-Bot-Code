@@ -7,22 +7,28 @@ public class BallHandler {
     CompressorSystem ballHandlerCompressor;
     Lifter lifter;
     FlyWheel flyWheel;
+    
     private int airTankRefreshWait;
-
+    
+    private double flyWheelSpeed;
+    
     BallHandler() {
         ballHandlerCompressor = new CompressorSystem();
         lifter = new Lifter();
         flyWheel = new FlyWheel();
         airTankRefreshWait = 0;
+        flyWheelSpeed = 0;
     }
 
     public void shoot() {
-        if (flyWheel.getSpeed() <= 0) {
-            SmartDashboard.putNumber("Failure to shoot!!! The motor is off", flyWheel.getSpeed());
+        flyWheelSpeed = flyWheel.getSpeed();
+        if (flyWheelSpeed > 0 && flyWheelSpeed <= 1) {
+            lifter.raiseTheBall();
+        } else {
+            SmartDashboard.putNumber("Failure to shoot!!! The motor is off", flyWheelSpeed);
         }
-       lifter.raiseTheBall();
     }
-    
+
     public void displayPressure() {
         airTankRefreshWait++;
 
